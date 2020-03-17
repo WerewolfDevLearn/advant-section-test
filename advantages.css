@@ -10,14 +10,23 @@
 html {
   box-sizing: border-box;
 }
-* {
+*, *::before, *::after {
   box-sizing: inherit;
+  margin:0;
+  padding:0;
 }
+ul{
+  list-style: none;
+}
+
+.advantages{
+  margin-bottom: 30px;
+}
+
 .advantages-container {
   width: 320px;
   margin-left: auto;
   margin-right: auto;
-
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -33,6 +42,8 @@ html {
 .advantage__heading {
   display: flex;
   align-items: center;
+  padding-top: 29px;
+  margin-bottom: 9px;
 }
 
 .advantage__icon {
@@ -49,19 +60,25 @@ html {
   position: absolute;
   visibility: hidden;
 }
+
 .advantage__header {
   font-family: "Open Sans";
   font-size: 20px;
   line-height: 78px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0px;
+  color: #222222;
+  
 }
+
 .advantage-list {
   font-family: "Ubuntu";
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   padding-left: 45px;
+  color: #444444;
 }
 
 .advantage-list__icon {
@@ -76,6 +93,10 @@ html {
 .advantage-list__text {
   padding-bottom: 25px;
 }
+.advantage-list__item:last-child .advantage-list__text{
+  padding-bottom: 0px;
+}
+
 .advantage-list__decoration--color-internet,
 .advantage-list__decoration--color-target {
   background-color: #fbeed7;
@@ -118,6 +139,10 @@ html {
     position: relative;
     visibility: visible;
   }
+  .advantages{
+    margin-bottom: 45px;
+  }
+  
 
   .advantages-container {
     width: 690px;
@@ -125,7 +150,6 @@ html {
     margin-right: auto;
     padding-left: 40px;
     padding-right: 40px;
-    margin-bottom: 45px;
   }
 
   .advantage__icon {
@@ -134,6 +158,14 @@ html {
     height: 30px;
     margin-right: 18px;
   }
+
+  .advantage__heading {
+    display: flex;
+    align-items: center;
+    padding-top: 29px;
+    margin-bottom: 27px;
+  }
+  
 
   .advantage__header {
     font-family: "Open Sans";
@@ -150,7 +182,6 @@ html {
     font-weight: 400;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 23px;
   }
 
   .advantage-list__item {
@@ -162,6 +193,7 @@ html {
   }
 
   .advantage-list__text {
+    color: #444444;
     padding-bottom: 37px;
   }
   .advantage-list__item:last-child .advantage-list__text {
@@ -224,14 +256,13 @@ html {
     background-color: #fafafa;
     overflow: hidden;
     padding-top: 93px;
-  }
+   }
   .advantages-container {
     min-width: 1300px;
     padding-left: 0;
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 45px;
   }
 
   .advantage__heading {
@@ -257,8 +288,8 @@ html {
     font-weight: 400;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 23px;
     padding-left: 0px;
+    padding-bottom: 109px;
   }
 
   .advantage-list__item {
@@ -266,6 +297,12 @@ html {
     margin-right: 0px;
     position: relative;
     z-index: 1;
+  }
+  .advantage-list__text{
+    padding-bottom: 62px;
+  }
+  .advantage-list__item:nth-last-child(-n+3) .advantage-list__text{
+    padding-bottom: 0px;
   }
   .advantage-list__item::before {
     content: "";
@@ -307,7 +344,7 @@ html {
     width: 96px;
     height: 96px;
     border-radius: 48px;
-    margin-bottom: 34px;
+    margin-bottom: 31px;
   }
   .advantage-list__icon {
     position: absolute;
